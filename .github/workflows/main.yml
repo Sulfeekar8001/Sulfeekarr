@@ -1,0 +1,16 @@
+name: my-app
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print pwd
+        run: pwd
+
+      - name: run simple command
+        run: echo "server is running"
+      
