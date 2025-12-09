@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout
-        uses: 
+      - name: Checkout
+        uses: actions/checkout@v6.0.1
 
       - name: run simple command
         run: ls -a
