@@ -1,16 +1,21 @@
 name: my-app
+
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+
+env:
+  name: sulfeekar
+
 jobs:
   build:
-    runs-on: sulf
+    runs-on: ubuntu-latest
+
+    env:
+      title: gud boy
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6.0.1
+      - name: env
+        run: echo "my name is $name"
 
-      - name: run simple command
-        run: ls -a
-      
+      - name: demo
+        run: echo "my name is $name and i am a $title"
